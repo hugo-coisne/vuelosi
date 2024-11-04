@@ -1,0 +1,15 @@
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 100%;
+}
+
+.till {
+  .fresque {
+    max-width: 40%;
+    top: -115px;
+  }
+  .fresque.left{
+    top: calc(-0.2 * 100vw);
+  }
+}

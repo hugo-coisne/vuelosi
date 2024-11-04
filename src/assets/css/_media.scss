@@ -1,0 +1,31 @@
+@use 'breakpoints';
+
+@mixin desktop {
+  @media (min-width: #{breakpoints.$screen-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{breakpoints.$screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: #{breakpoints.$screen-small-tablet}) {
+    @content;
+  }
+}
+
+@mixin large-mobile {
+  @media (max-width: #{breakpoints.$screen-large-mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{breakpoints.$screen-mobile}) {
+    @content;
+  }
+}

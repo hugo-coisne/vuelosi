@@ -1,0 +1,147 @@
+@mixin icon-size($size){
+  width:$size;
+  height:$size;
+  background-size: $size $size;
+  -webkit-mask-size: $size $size;
+}
+
+@mixin icon-attribute($urlSvg) {
+  background-image: url($urlSvg);
+  display: inline-block;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  &--small {
+    @include icon-size(16px);
+  }
+  &--button {
+    @include icon-size(22px);
+  }
+  &--medium {
+    @include icon-size(32px);
+  }
+  &--big {
+    @include icon-size(64px);
+  }
+  &--bigger {
+    @include icon-size(90px);
+  }
+}
+
+@mixin icon-attribute-with-font-color($urlSvg) {
+  @include icon-attribute($urlSvg);
+  mask: url($urlSvg);
+  -webkit-mask: url($urlSvg);
+  mask-size: 100%;
+}
+
+.talomoji-classic {
+  @include icon-attribute-with-font-color("../svg/talomoji/talosi.svg");
+}
+
+.talomoji-chapeu-chinois {
+  @include icon-attribute-with-font-color("../svg/talomoji/chapeauchinois.svg");
+}
+
+.talomoji-clindoeil {
+  @include icon-attribute-with-font-color("../svg/talomoji/clindoeil.svg");
+}
+
+.talomoji-langue {
+  @include icon-attribute-with-font-color("../svg/talomoji/langue.svg");
+}
+
+.talomoji-smile {
+  @include icon-attribute-with-font-color("../svg/talomoji/smile.svg");
+}
+
+.talomoji-cookie {
+  @include icon-attribute-with-font-color("../svg/talomoji/cookie.svg");
+}
+
+.techno-angular {
+  @include icon-attribute-with-font-color("../svg/skills/angular.svg");
+}
+
+.techno-php {
+  @include icon-attribute-with-font-color("../svg/skills/php.svg");
+}
+
+.techno-react {
+  @include icon-attribute-with-font-color("../svg/skills/react.svg");
+}
+
+.techno-vue {
+  @include icon-attribute-with-font-color("../svg/skills/vue.svg");
+}
+
+.techno-java {
+  @include icon-attribute-with-font-color("../svg/skills/java.svg");
+}
+
+.techno-docker {
+  @include icon-attribute-with-font-color("../svg/skills/docker.svg");
+}
+
+.techno-node {
+  @include icon-attribute-with-font-color("../svg/skills/nodejs.svg");
+}
+
+.techno-beer {
+  @include icon-attribute-with-font-color("../svg/skills/beer.svg");
+}
+
+.techno-electron {
+  @include icon-attribute-with-font-color("../svg/skills/electron.svg");
+}
+
+.techno-thumb {
+  @include icon-attribute-with-font-color("../svg/skills/thumb.svg");
+}
+
+.techno-rocket {
+  @include icon-attribute-with-font-color("../svg/skills/rocket.svg");
+}
+
+.techno-bigdata {
+  @include icon-attribute-with-font-color("../svg/skills/bigdata.svg");
+}
+
+.techno-python {
+  @include icon-attribute-with-font-color("../svg/skills/python.svg");
+}
+
+.techno-cloud {
+  @include icon-attribute-with-font-color("../svg/skills/cloud.svg");
+}
+
+.ico-bullseye {
+  @include icon-attribute-with-font-color("../svg/icon/bullseye.svg");
+}
+
+.ico-data-storage {
+  @include icon-attribute-with-font-color("../svg/icon/data-storage.svg");
+}
+
+.ico-clock {
+  @include icon-attribute-with-font-color("../svg/icon/clock.svg");
+}
+
+.ico-price-tag {
+  @include icon-attribute-with-font-color("../svg/icon/price-tag.svg");
+}
+
+.ico-location {
+  @include icon-attribute-with-font-color("../svg/icon/location.svg");
+}
+
+.ico-sessions {
+  @include icon-attribute-with-font-color("../svg/icon/sessions.svg");
+}
+
+.ico-open-book {
+  @include icon-attribute-with-font-color("../svg/icon/open-book.svg");
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "image": "assets/images/talents/nicolas.jpeg",
+    "firstname": "Nicolas",
+    "job": "Tech Leader",
+    "roles": [
+      {
+        "name": "team.roles.dev",
+        "tags": "Code quality, Code review, Audit, ..."
+      },
+      {
+        "name": "team.roles.devops",
+        "tags": "GCP, AWS, CI/CD, GitOps, ..."
+      },
+      {
+        "name": "team.roles.former",
+        "tags": "Devops, Coding, ..."
+      }
+    ],
+    "technos": [
+      "techno-beer",
+      "techno-java",
+      "techno-node",
+      "techno-vue",
+      "techno-docker"
+    ]
+  },
+  {
+    "image": "assets/images/talents/remi.jpg",
+    "firstname": "Remi",
+    "job": "CEO",
+    "roles": [
+      {
+        "name": "Conseil évolution pro",
+        "tags": "Consultants, managers, Startup ..."
+      },
+      {
+        "name": "Formateur",
+        "tags": "Marketing de soi, Pitch, communication ..."
+      }
+    ],
+    "technos": [
+      "techno-rocket",
+      "techno-electron",
+      "techno-thumb",
+      "techno-beer"
+    ]
+  },
+  {
+    "image": "assets/images/talents/sebastien.jpg",
+    "firstname": "Sébastien",
+    "job": "Tech Leader",
+    "roles": [
+      {
+        "name": "team.roles.dev",
+        "tags": "Code quality, Code review, Audit, Architecture"
+      },
+      {
+        "name": "team.roles.fullstack",
+        "tags": "front, back, GCP, AWS, CI/CD"
+      },
+      {
+        "name": "team.roles.former",
+        "tags": "Angular, React, Java, devops"
+      }
+    ],
+    "technos": [
+      "techno-angular",
+      "techno-react",
+      "techno-java",
+      "techno-node",
+      "techno-docker"
+    ]
+  },
+  {
+    "image": "assets/images/talents/noe.jpg",
+    "firstname": "Noë",
+    "job": "Developpeur & CTO",
+    "roles": [
+      {
+        "name": "team.roles.dev",
+        "tags": "Gestion qualité logiciel, Facilitateur technique"
+      },
+      {
+        "name": "team.roles.bigdata",
+        "tags": "Architecture Big Data, devops, cloud"
+      },
+      {
+        "name": "team.roles.former",
+        "tags": "Scrum, Cloud, Docker, CI/CD, Data"
+      }
+    ],
+    "technos": [
+      "techno-java",
+      "techno-python",
+      "techno-docker",
+      "techno-bigdata",
+      "techno-beer"
+    ]
+  },
+  {
+    "image": "assets/images/talents/dylan.jpg",
+    "firstname": "Dylan",
+    "job": "Developpeur Full Stack",
+    "roles": [
+      {
+        "name": "team.roles.dev",
+        "tags": "Code quality, Code review, Full stack, ..."
+      },
+      {
+        "name": "team.roles.devops",
+        "tags": "AWS, CI/CD, GitOps, ..."
+      }
+    ],
+    "technos": [
+      "techno-java",
+      "techno-angular",
+      "techno-vue",
+      "techno-beer"
+    ]
+  },
+  {
+    "image": "assets/images/talents/kevin.jpg",
+    "firstname": "Kevin",
+    "job": "Coach - CEO",
+    "roles": [
+      {
+        "name": "Conseil évolution pro",
+        "tags": "Consultants, managers, Startup ..."
+      },
+      {
+        "name": "Formateur",
+        "tags": "Marketing de soi, Pitch, communication ..."
+      }
+    ],
+    "technos": [
+      "techno-rocket",
+      "techno-electron",
+      "techno-thumb",
+      "techno-beer"
+    ]
+  },
+  {
+    "image": "assets/images/talents/guillaume.jpeg",
+    "firstname": "Guillaume",
+    "job": "Developpeur sénior",
+    "roles": [
+      {
+        "name": "team.roles.dev",
+        "tags": "Code quality, Code review, Backend, ..."
+      },
+      {
+        "name": "team.roles.devops",
+        "tags": "CI/CD, GitOps, ..."
+      },
+      {
+        "name": "team.roles.former",
+        "tags": "Java, CI/CD, GitOps, ..."
+      }
+    ],
+    "technos": [
+      "techno-java",
+      "techno-docker",
+      "techno-beer"
+    ]
+  }
+]
