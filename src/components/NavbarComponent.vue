@@ -68,7 +68,7 @@ const path = computed(() => route.path)
             </li>
           </ul>
           <div class="social">
-            <SocialIconsComponent class="icons"/>
+            <SocialIconsComponent class="icons" />
           </div>
           <div class="burger-menu">
             <BurgerMenuComponent @toggleMenu="onToggleMenu()" />
@@ -93,9 +93,13 @@ const path = computed(() => route.path)
       </div>
       <ul>
         <li class="nav-item" v-for="link in links">
-          <RouterLink class="nav-link" aria-current="page" @click="onToggleMenu()" :to="link.path">{{
-            link.name
-          }}</RouterLink>
+          <RouterLink
+            :class="'nav-link ' + (path == link.path ? 'active' : '')"
+            aria-current="page"
+            @click="onToggleMenu()"
+            :to="link.path"
+            >{{ link.name }}</RouterLink
+          >
         </li>
         <li class="nav-item">
           <a
@@ -107,13 +111,19 @@ const path = computed(() => route.path)
           >
         </li>
         <li class="nav-item" v-for="link in lastLinks">
-          <RouterLink class="nav-link" aria-current="page" @click="onToggleMenu()" :to="link.path">{{
-            link.name
-          }}</RouterLink>
+          <RouterLink
+            :class="'nav-link ' + (path == link.path ? 'active' : '')"
+            aria-current="page"
+            @click="onToggleMenu()"
+            :to="link.path"
+            >{{ link.name }}</RouterLink
+          >
         </li>
       </ul>
       <div class="footer">
-        <RouterLink aria-current="page" to="/rse" @click="onToggleMenu()">Politique RSE</RouterLink>
+        <RouterLink aria-current="page" to="/rse" @click="onToggleMenu()"
+          >Politique RSE</RouterLink
+        >
         <a
           href="https://docs.google.com/document/d/12EALCcaM8MsrVJoaaaKDyu8d3nD-LVEo8Fu1zG73I_4"
           target="_blank"
@@ -121,10 +131,11 @@ const path = computed(() => route.path)
         >
         <a
           href="https://docs.google.com/document/d/1qjTJoQsc3tQ3xn9-82PIWNDryZvyl8lT0WxVlBnHuhU"
-          target="_blank" @click="onToggleMenu()"
+          target="_blank"
+          @click="onToggleMenu()"
           >Politique de confidentialité</a
         >
-        <SocialIconsComponent class="icons" inverseColor/>
+        <SocialIconsComponent class="pb-4 pt-4" invertColor />
       </div>
     </div>
   </header>

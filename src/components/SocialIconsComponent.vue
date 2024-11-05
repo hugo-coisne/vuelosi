@@ -14,21 +14,21 @@ const networks = ref([
   },
 ])
 interface Props {
-  inverseColor?: boolean
+  invertColor?: boolean
   size?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  inverseColor: false,
+  invertColor: false,
   size: 'md',
 })
 </script>
 
 <template>
   <div class="social-icons">
-    <div :class="'icon ' + props.size" v-for="network of networks">
+    <div :class="'icon ' + props.size + ' ' + (invertColor ? 'inverse':'')" v-for="network of networks">
       <a :href="network.link" target="_blank" rel="nofollow">
         <img
-          :src="`src/assets/svg/social/${network.name}${!props.inverseColor ? '' : '_blue'}.svg`"
+          :src="`src/assets/svg/social/${network.name}${!props.invertColor ? '' : '_blue'}.svg`"
           :class="network.name"
           :alt="'logo ' + network.name"
         />
@@ -36,6 +36,9 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
   </div>
 </template>
+
+<script>
+</script>
 
 <style lang="scss">
 @use '@/assets/css/variables';
