@@ -3,6 +3,8 @@
 @use "sass:meta";
 @use "assets/css/variables";
 @use "assets/css/fonts" as *;
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
 @include font-app;
 
 html, body {
