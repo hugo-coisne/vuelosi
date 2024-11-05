@@ -25,10 +25,13 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <div class="social-icons">
-    <div :class="'icon ' + props.size + ' ' + (invertColor ? 'inverse':'')" v-for="network of networks">
+    <div
+      :class="'icon ' + props.size + ' ' + (invertColor ? 'inverse' : '')"
+      v-for="network of networks"
+    >
       <a :href="network.link" target="_blank" rel="nofollow">
         <img
-          :src="`src/assets/svg/social/${network.name}${!props.invertColor ? '' : '_blue'}.svg`"
+          :src="`src/assets/svg/social/${network.name + (!props.invertColor ? '' : '_blue')}.svg`"
           :class="network.name"
           :alt="'logo ' + network.name"
         />
@@ -36,9 +39,6 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
   </div>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 @use '@/assets/css/variables';
