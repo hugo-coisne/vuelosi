@@ -8,29 +8,44 @@ import BurgerMenuComponent from './BurgerMenuComponent.vue'
 import SocialIconsComponent from './SocialIconsComponent.vue'
 import { computed, defineComponent, ref } from 'vue'
 import router from '@/router/index'
-const showSideNav = ref(false)
+
 const html = document.documentElement
+const routes = router.getRoutes()
+
+interface Props {
+  showSideNav?: boolean
+  greyNavbar?: boolean
+  blogIndex?: number
+  hiddenLinksCount?: number
+}
+const props = withDefaults(defineProps<Props>(), {
+  showSideNav: false,
+  greyNavbar: false,
+  blogIndex: 1,
+  hiddenLinksCount: 1,
+})
+
+const showSideNav = ref(props.showSideNav)
+
+const links = ref(
+  routes.slice(0, routes.length - props.blogIndex - props.hiddenLinksCount),
+)
+const lastLinks = ref(
+  routes.slice(
+    routes.length - props.blogIndex - props.hiddenLinksCount,
+    routes.length - props.hiddenLinksCount,
+  ),
+)
+
+const route = useRoute()
+const path = computed(() => route.path)
+
 function onToggleMenu() {
   showSideNav.value = !showSideNav.value
   showSideNav.value
     ? (html.style.overflow = 'hidden')
     : (html.style.overflow = 'auto')
 }
-const routes = router.getRoutes()
-const greyNavbar = ref(false)
-const blogIndex = ref(1)
-const hiddenLinks = ref(1)
-const links = ref(
-  routes.slice(0, routes.length - blogIndex.value - hiddenLinks.value),
-)
-const lastLinks = ref(
-  routes.slice(
-    routes.length - blogIndex.value - hiddenLinks.value,
-    routes.length - hiddenLinks.value,
-  ),
-)
-const route = useRoute()
-const path = computed(() => route.path)
 </script>
 
 <template>
@@ -70,8 +85,8 @@ const path = computed(() => route.path)
           <div class="social">
             <SocialIconsComponent class="icons" />
           </div>
-          <div class="burger-menu">
-            <BurgerMenuComponent @toggleMenu="onToggleMenu()" />
+          <div class="burger-menu" @click="onToggleMenu()">
+            <BurgerMenuComponent/>
           </div>
         </div>
       </div>
@@ -141,14 +156,6 @@ const path = computed(() => route.path)
   </header>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  computed: {
-    style() {},
-  },
-})
-</script>
-
 <style lang="scss">
 @use '@/assets/css/media';
 @use '@/assets/css/variables';
@@ -210,6 +217,10 @@ export default defineComponent({
         margin-left: 2rem;
         padding: 1rem;
         background-color: variables.$yellow;
+        cursor: pointer;
+      }
+      .burger-menu * {
+        cursor: pointer;
       }
     }
   }

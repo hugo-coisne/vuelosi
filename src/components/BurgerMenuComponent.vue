@@ -1,12 +1,6 @@
 <script setup lang="ts"></script>
 <template>
   <div class="burger-container">
-    <input
-      @click="$emit('toggleMenu')"
-      type="checkbox"
-      id="menuToggle"
-      class="visuallyHidden"
-    />
     <label for="menuToggle" class="burger-label">
       <span class="visuallyHidden">Toggle Menu</span>
       <div class="hamburger">
