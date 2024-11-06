@@ -135,7 +135,7 @@ const props = withDefaults(defineProps<Props>(), {
             extra-terrestre dans une célèbre série de science-fiction.
           </p>
         </div>
-        <ButtonComponent id="rejoin-us-intro" class="mt-3" size="large" link="/contact"
+        <ButtonComponent id="rejoin-us-intro" class="mt-3" size="large" routerLink="/contact"
           >{{ props.buttonText }}
         </ButtonComponent>
       </div>

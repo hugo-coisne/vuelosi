@@ -53,7 +53,7 @@ const classes = computed(
 </template>
 
 <style lang="scss">
-@use "@/assets/css/variables";
+@use '@/assets/css/variables';
 
 .t-button {
   border: 0;
@@ -61,7 +61,7 @@ const classes = computed(
   display: inline-block;
   line-height: 1;
   text-transform: uppercase;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-weight: bolder;
   border-radius: 10px;
 
@@ -131,7 +131,5 @@ const classes = computed(
     padding: 20px 50px;
     border-radius: 50px;
   }
-
 }
-
 </style>
