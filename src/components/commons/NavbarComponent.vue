@@ -52,7 +52,7 @@ function onToggleMenu() {
   <header>
     <div class="talosi-fake-navbar"></div>
 
-    <nav class="talosi-navbar no-print">
+    <nav class="talosi-navbar no-print" style="background-color: white;">
       <div class="container-fluid">
         <RouterLink class="navbar-logo" to="/">
           <img
@@ -177,7 +177,7 @@ function onToggleMenu() {
 }
 
 .talosi-fake-navbar {
-  height: 40px;
+  height: 80px;
 }
 
 .grey-navbar {
@@ -309,7 +309,7 @@ function onToggleMenu() {
 
 @include media.large-mobile {
   .talosi-fake-navbar {
-    height: 35px;
+    height: 70px;
   }
 
   .talosi-navbar {
