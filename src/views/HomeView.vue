@@ -5,7 +5,7 @@ import IntroComponent from '@/components/home/IntroComponent.vue'
 
 <template>
   <IntroComponent />
-  <FiguresComponent webTitle="TALOSI EN QUELQUES CHIFFRES" mobileTitle="EN QUELQUES CHIFFRES"/>
+  <FiguresComponent :webTitle="'TALOSI EN QUELQUES CHIFFRES'" :mobileTitle="'EN QUELQUES CHIFFRES'"/>
 </template>
 
 <style lang="scss">
