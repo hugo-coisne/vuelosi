@@ -35,10 +35,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="card">
-    <div class="card-infos">
-      <h2 ref="stats" class="stats">{{ base }}</h2>
-      <div class="context">{{ props.context }}</div>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-infos">
+        <h2 ref="stats" class="cardTitle">{{ base }}</h2>
+        <div class="context">{{ props.context }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -62,7 +64,8 @@ onMounted(() => {
   width: auto;
 }
 
-h2 {
+
+.cardTitle {
   color: white;
   text-align: center;
   font-size: xxx-large;
