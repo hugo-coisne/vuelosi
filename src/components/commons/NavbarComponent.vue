@@ -6,7 +6,7 @@ import CrossCircleSVG from '@/assets/svg/tillsets/cross-circle.svg'
 import TalosiLogoBlancSVG from '@/assets/svg/logo/talosi-logo-blanc.svg'
 import BurgerMenuComponent from './BurgerMenuComponent.vue'
 import SocialIconsComponent from './SocialIconsComponent.vue'
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref, watch } from 'vue'
 import router from '@/router/index'
 
 const html = document.documentElement
@@ -18,31 +18,37 @@ interface Props {
   blogIndex?: number
   hiddenLinksCount?: number
 }
-const props = withDefaults(defineProps<Props>(), {
-  showSideNav: false,
-  greyNavbar: false,
-  blogIndex: 1,
-  hiddenLinksCount: 1,
-})
 
-const showSideNav = ref(props.showSideNav)
+var {
+  blogIndex = 1,
+  hiddenLinksCount = 1,
+  showSideNav = false,
+  greyNavbar = false,
+} = defineProps<Props>()
 
-const links = ref(
-  routes.slice(0, routes.length - props.blogIndex - props.hiddenLinksCount),
-)
+const showSideNavCopy = ref(showSideNav)
+
+const links = ref(routes.slice(0, routes.length - blogIndex - hiddenLinksCount))
 const lastLinks = ref(
   routes.slice(
-    routes.length - props.blogIndex - props.hiddenLinksCount,
-    routes.length - props.hiddenLinksCount,
+    routes.length - blogIndex - hiddenLinksCount,
+    routes.length - hiddenLinksCount,
   ),
 )
 
 const route = useRoute()
 const path = computed(() => route.path)
 
+watch(
+  () => showSideNav,
+  newVal => {
+    showSideNavCopy.value = newVal
+  },
+)
+
 function onToggleMenu() {
-  showSideNav.value = !showSideNav.value
-  showSideNav.value
+  showSideNavCopy.value = !showSideNavCopy.value
+  showSideNavCopy.value
     ? (html.style.overflow = 'hidden')
     : (html.style.overflow = 'auto')
 }
@@ -52,7 +58,7 @@ function onToggleMenu() {
   <header>
     <div class="talosi-fake-navbar"></div>
 
-    <nav class="talosi-navbar no-print" style="background-color: white;">
+    <nav class="talosi-navbar no-print" style="background-color: white">
       <div class="container-fluid">
         <RouterLink class="navbar-logo" to="/">
           <img
@@ -86,7 +92,7 @@ function onToggleMenu() {
             <SocialIconsComponent class="icons" />
           </div>
           <div class="burger-menu" @click="onToggleMenu()">
-            <BurgerMenuComponent/>
+            <BurgerMenuComponent />
           </div>
         </div>
       </div>

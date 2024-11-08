@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import SocialIconsComponent from './SocialIconsComponent.vue'
-interface Props {
+
+const { displayFooterTxt = true } = defineProps<{
   displayFooterTxt?: boolean
-}
-const props = withDefaults(defineProps<Props>(), {
-  displayFooterTxt: true,
-})
+}>()
 </script>
 
 <template>

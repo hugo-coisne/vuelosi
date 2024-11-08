@@ -1,26 +1,20 @@
 <script setup lang="ts">
-  interface Props {
-    subtitle?: string
-    title?: string
-  }
-  const props = withDefaults(defineProps<Props>(), {
-    subtitle: "",
-    title: "The main title"
-  })
+const { subtitle = '', title = 'The main title' } = defineProps<{
+  subtitle?: string
+  title?: string
+}>()
 </script>
 
 <template>
-<div class="title-section gs_reveal gs_reveal_fromLeft">
-  <span>{{ props.subtitle }}</span>
-  <h2>{{ props.title }}</h2>
-</div>
-
-
+  <div class="title-section gs_reveal gs_reveal_fromLeft">
+    <span>{{ subtitle }}</span>
+    <h2>{{ title }}</h2>
+  </div>
 </template>
 
 <style lang="scss">
-@use "@/assets/css/variables";
-@use "@/assets/css/underline";
+@use '@/assets/css/variables';
+@use '@/assets/css/underline';
 
 .title-section {
   margin-bottom: 20px;
@@ -44,5 +38,4 @@
 .hidden-text {
   opacity: 0;
 }
-
 </style>

@@ -13,25 +13,22 @@ const networks = ref([
     link: 'https://www.instagram.com/talosi.official/?igshid=YmMyMTA2M2Y%3D',
   },
 ])
-interface Props {
+
+const { invertColor = false, size = 'md' } = defineProps<{
   invertColor?: boolean
   size?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  invertColor: false,
-  size: 'md',
-})
+}>()
 </script>
 
 <template>
   <div class="social-icons">
     <div
-      :class="'icon ' + props.size + ' ' + (invertColor ? 'inverse' : '')"
+      :class="'icon ' + size + ' ' + (invertColor ? 'inverse' : '')"
       v-for="network of networks"
     >
       <a :href="network.link" target="_blank" rel="nofollow">
         <img
-          :src="`src/assets/svg/social/${network.name + (!props.invertColor ? '' : '_blue')}.svg`"
+          :src="`src/assets/svg/social/${network.name + (!invertColor ? '' : '_blue')}.svg`"
           :class="network.name"
           :alt="'logo ' + network.name"
         />

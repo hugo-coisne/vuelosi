@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import ButtonComponent from '@/components/commons/ButtonComponent.vue';
+import ButtonComponent from '@/components/commons/ButtonComponent.vue'
 
-interface Props {
+const {
+  cities = ['Lille', 'Paris', 'Lyon'],
+  buttonText = "Rejoindre l'aventure",
+} = defineProps<{
   cities?: any
   buttonText?: string
-}
-const props = withDefaults(defineProps<Props>(), {
-  cities: ['Lille', 'Paris', 'Lyon'],
-  buttonText: "Rejoindre l'aventure",
-})
+}>()
 </script>
 
 <template>
@@ -135,8 +134,12 @@ const props = withDefaults(defineProps<Props>(), {
             extra-terrestre dans une célèbre série de science-fiction.
           </p>
         </div>
-        <ButtonComponent id="rejoin-us-intro" class="mt-3" size="large" routerLink="/contact"
-          >{{ props.buttonText }}
+        <ButtonComponent
+          id="rejoin-us-intro"
+          class="mt-3"
+          size="large"
+          routerLink="/contact"
+          >{{ buttonText }}
         </ButtonComponent>
       </div>
     </div>

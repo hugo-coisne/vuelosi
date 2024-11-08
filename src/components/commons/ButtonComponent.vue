@@ -14,35 +14,30 @@ interface Props {
   buttonText?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  block: false,
-  type: 'primary',
-  id: null,
-  size: 'medium',
-  class: '',
-  routerLink: '',
-  href: '',
-  disabled: false,
-  cities: ['Lille', 'Paris', 'Lyon'],
-  buttonText: "Rejoindre l'aventure",
-})
+const {
+  type= 'primary',
+  size = 'medium',
+  class: btClass,
+  routerLink= '',
+  href= '',
+} = defineProps<Props>()
 
 const router = useRouter()
 
 function onClick() {
-  if (props.routerLink != '') {
-    router.push(props.routerLink)
+  if (routerLink != '') {
+    router.push(routerLink)
     window.scrollTo(0, 0)
   }
-  if (props.href != '') {
+  if (href != '') {
     const newWindow = window.open()
-    if (newWindow) newWindow.location.href = props.href
+    if (newWindow) newWindow.location.href = href
   }
 }
 
 const classes = computed(
   () =>
-    `t-button t-button--${props.type} t-button--${props.size} ${props.class}`,
+    `t-button t-button--${type} t-button--${size} ${btClass}`,
 )
 </script>
 
