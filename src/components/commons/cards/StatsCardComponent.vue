@@ -14,7 +14,7 @@ const stats = useTemplateRef('stats')
 let tmp = 0
 
 function animateValue(targetValue: number): void {
-  gsap.to('.stats', {
+  gsap.to(stats.value, {
     duration: 2,
     ease: 'linear',
     onUpdate: () => {
