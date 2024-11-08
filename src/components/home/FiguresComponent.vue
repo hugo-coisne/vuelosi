@@ -37,16 +37,14 @@ const {
   <section id="statistics">
     <div>
       <div class="container">
-        <TitleSectionComponent
-          :title="webTitle"
-          class="webTitle"
-        ></TitleSectionComponent>
-        <TitleSectionComponent
-          :title="mobileTitle"
-          class="mobileTitle"
-        ></TitleSectionComponent>
+        <TitleSectionComponent :title="webTitle" class="webTitle" />
+        <TitleSectionComponent :title="mobileTitle" class="mobileTitle" />
         <CardListComponent :component-count="figures.length">
-          <StatsCardComponent v-for="figure in figures" :stat="figure.stat" :context="figure.context" />
+          <StatsCardComponent
+            v-for="figure in figures"
+            :stat="figure.stat"
+            :context="figure.context"
+          />
         </CardListComponent>
       </div>
     </div>
