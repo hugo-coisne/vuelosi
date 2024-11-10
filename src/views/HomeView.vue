@@ -2,6 +2,7 @@
 import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
 import IntroComponent from '@/components/home/IntroComponent.vue'
+import TalentsComponent from '@/components/home/TalentsComponent.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import IntroComponent from '@/components/home/IntroComponent.vue'
     :title="'NOS EXPERTISES'"
     :subtitle="'Nos talents au service de vos idées'"
   />
+  <TalentsComponent />
 </template>
 
 <style lang="scss">

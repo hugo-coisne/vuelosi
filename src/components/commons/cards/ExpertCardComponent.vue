@@ -30,7 +30,7 @@ const {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 @use '@/assets/css/card';
 

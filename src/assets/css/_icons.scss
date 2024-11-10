@@ -1,6 +1,6 @@
-@mixin icon-size($size){
-  width:$size;
-  height:$size;
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
   background-size: $size $size;
   -webkit-mask-size: $size $size;
 }
@@ -39,109 +39,113 @@
 }
 
 .talomoji-classic {
-  @include icon-attribute-with-font-color("../svg/talomoji/talosi.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/talomoji/talosi.svg');
 }
 
 .talomoji-chapeu-chinois {
-  @include icon-attribute-with-font-color("../svg/talomoji/chapeauchinois.svg");
+  @include icon-attribute-with-font-color(
+    '@/assets/svg/talomoji/chapeauchinois.svg'
+  );
 }
 
 .talomoji-clindoeil {
-  @include icon-attribute-with-font-color("../svg/talomoji/clindoeil.svg");
+  @include icon-attribute-with-font-color(
+    '@/assets/svg/talomoji/clindoeil.svg'
+  );
 }
 
 .talomoji-langue {
-  @include icon-attribute-with-font-color("../svg/talomoji/langue.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/talomoji/langue.svg');
 }
 
 .talomoji-smile {
-  @include icon-attribute-with-font-color("../svg/talomoji/smile.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/talomoji/smile.svg');
 }
 
 .talomoji-cookie {
-  @include icon-attribute-with-font-color("../svg/talomoji/cookie.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/talomoji/cookie.svg');
 }
 
 .techno-angular {
-  @include icon-attribute-with-font-color("../svg/skills/angular.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/angular.svg');
 }
 
 .techno-php {
-  @include icon-attribute-with-font-color("../svg/skills/php.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/php.svg');
 }
 
 .techno-react {
-  @include icon-attribute-with-font-color("../svg/skills/react.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/react.svg');
 }
 
 .techno-vue {
-  @include icon-attribute-with-font-color("../svg/skills/vue.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/vue.svg');
 }
 
 .techno-java {
-  @include icon-attribute-with-font-color("../svg/skills/java.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/java.svg');
 }
 
 .techno-docker {
-  @include icon-attribute-with-font-color("../svg/skills/docker.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/docker.svg');
 }
 
 .techno-node {
-  @include icon-attribute-with-font-color("../svg/skills/nodejs.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/nodejs.svg');
 }
 
 .techno-beer {
-  @include icon-attribute-with-font-color("../svg/skills/beer.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/beer.svg');
 }
 
 .techno-electron {
-  @include icon-attribute-with-font-color("../svg/skills/electron.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/electron.svg');
 }
 
 .techno-thumb {
-  @include icon-attribute-with-font-color("../svg/skills/thumb.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/thumb.svg');
 }
 
 .techno-rocket {
-  @include icon-attribute-with-font-color("../svg/skills/rocket.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/rocket.svg');
 }
 
 .techno-bigdata {
-  @include icon-attribute-with-font-color("../svg/skills/bigdata.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/bigdata.svg');
 }
 
 .techno-python {
-  @include icon-attribute-with-font-color("../svg/skills/python.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/python.svg');
 }
 
 .techno-cloud {
-  @include icon-attribute-with-font-color("../svg/skills/cloud.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/skills/cloud.svg');
 }
 
 .ico-bullseye {
-  @include icon-attribute-with-font-color("../svg/icon/bullseye.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/bullseye.svg');
 }
 
 .ico-data-storage {
-  @include icon-attribute-with-font-color("../svg/icon/data-storage.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/data-storage.svg');
 }
 
 .ico-clock {
-  @include icon-attribute-with-font-color("../svg/icon/clock.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/clock.svg');
 }
 
 .ico-price-tag {
-  @include icon-attribute-with-font-color("../svg/icon/price-tag.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/price-tag.svg');
 }
 
 .ico-location {
-  @include icon-attribute-with-font-color("../svg/icon/location.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/location.svg');
 }
 
 .ico-sessions {
-  @include icon-attribute-with-font-color("../svg/icon/sessions.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/sessions.svg');
 }
 
 .ico-open-book {
-  @include icon-attribute-with-font-color("../svg/icon/open-book.svg");
+  @include icon-attribute-with-font-color('@/assets/svg/icon/open-book.svg');
 }

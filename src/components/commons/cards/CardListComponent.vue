@@ -1,54 +1,113 @@
 <script setup lang="ts">
-import { ref, useTemplateRef } from 'vue'
+import { computeStyles } from '@popperjs/core'
+import { computed, ref, useTemplateRef, watch } from 'vue'
 
-const props = defineProps<{
-  componentCount: number
+const { componentCount = 1, gradientColor = 'white' } = defineProps<{
+  componentCount?: number
+  gradientColor?: string
 }>()
+
+const hiddenSideParts = ref({ left: false, right: false })
+
+function updateSidePartsDisplay() {
+  hiddenSideParts.value = { left: hideLeftPart(), right: hideRightPart() }
+}
 
 const hoverOnLeft = ref(false)
 const hoverOnRight = ref(false)
+
 const cardList = useTemplateRef('list')
 
+const whiteOverlayStyleFactory = (angle: number) =>
+  `background: linear-gradient(${angle}deg, ${gradientColor} 0%, transparent 100%)`
+
+const rightOverlayAngle = 270
+let rightScroller = -1
+const rightOverlayStyle = computed(() =>
+  whiteOverlayStyleFactory(rightOverlayAngle),
+)
+
+const leftOverlayAngle = 90
+let leftScroller = -1
+const leftOverlayStyle = computed(() =>
+  whiteOverlayStyleFactory(leftOverlayAngle),
+)
+
 function scrollLeft(scrollValue: number) {
-  setTimeout(() => {
-    let maxScroll = cardList.value!.scrollWidth - cardList.value!.clientWidth
-    if (hoverOnRight.value && cardList.value!.scrollLeft < maxScroll) {
-      cardList.value!.scrollTo({
-        left: cardList.value!.scrollLeft + scrollValue,
-      })
-    }
-  }, 30)
+  cardList.value!.scrollTo({
+    left: cardList.value!.scrollLeft + scrollValue,
+  })
 }
 
 function scrollRight(scrollValue: number) {
-  setTimeout(() => {
-    if (hoverOnLeft.value && cardList.value!.scrollLeft > 0) {
-      cardList.value!.scrollTo({
-        left: cardList.value!.scrollLeft - scrollValue,
-      })
-    }
-  }, 10)
+  cardList.value!.scrollTo({
+    left: cardList.value!.scrollLeft - scrollValue,
+  })
 }
+
+watch(hoverOnLeft, newVal => {
+  if (newVal) {
+    rightScroller = setInterval(function () {
+      scrollRight(10)
+      updateSidePartsDisplay()
+    }, 30)
+  } else {
+    clearInterval(rightScroller)
+  }
+})
+
+watch(hoverOnRight, newVal => {
+  if (newVal) {
+    leftScroller = setInterval(function () {
+      scrollLeft(10)
+      updateSidePartsDisplay()
+    }, 30)
+  } else {
+    clearInterval(leftScroller)
+  }
+})
 
 function mouseHoverLeft() {
   hoverOnLeft.value = true
-  scrollRight(10)
 }
 
 function mouseClickLeft() {
-  hoverOnLeft.value = true
   scrollRight(296)
 }
 
 function mouseHoverRight() {
   hoverOnRight.value = true
-  scrollLeft(10)
 }
 
 function mouseClickRight() {
-  hoverOnRight.value = true
   scrollLeft(296)
 }
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent,
+  )
+}
+
+function hideLeftPart() {
+  console.log('hide left part :', cardList.value!.scrollLeft == 0)
+  return cardList.value!.scrollLeft == 0 || isMobileDevice()
+}
+
+function hideRightPart() {
+  console.log(
+    'hide right part :',
+    cardList.value!.scrollLeft ==
+      cardList.value!.scrollWidth - cardList.value!.clientWidth,
+  )
+  return (
+    cardList.value!.scrollLeft ==
+      cardList.value!.scrollWidth - cardList.value!.clientWidth ||
+    isMobileDevice()
+  )
+}
+
+watch(cardList, updateSidePartsDisplay)
 </script>
 
 <template>
@@ -59,18 +118,24 @@ function mouseClickRight() {
         @click="mouseClickLeft()"
         @mouseleave="hoverOnLeft = false"
         class="left"
+        :style="
+          leftOverlayStyle + `${hiddenSideParts.left ? ';opacity: 0;' : ''}`
+        "
       ></div>
       <div
         @mouseenter="mouseHoverRight()"
         @click="mouseClickRight()"
         @mouseleave="hoverOnRight = false"
         class="right"
+        :style="
+          rightOverlayStyle + `${hiddenSideParts.right ? ';opacity: 0;' : ''}`
+        "
       ></div>
     </div>
     <div
       ref="list"
       class="card-list"
-      :style="'grid-template-columns: repeat(' + props.componentCount + ', 1fr)'"
+      :style="'grid-template-columns: repeat(' + componentCount + ', 1fr)'"
     >
       <slot />
     </div>
@@ -104,7 +169,6 @@ $card-border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         z-index: 2;
         height: 100%;
-        padding: 0 !important;
         .card-body {
           height: 100%;
           h5 {

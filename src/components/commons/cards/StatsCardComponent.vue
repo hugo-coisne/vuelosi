@@ -45,7 +45,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 @use '@/assets/css/icons';
 
@@ -63,7 +63,6 @@ onMounted(() => {
   padding: 0 !important;
   width: auto;
 }
-
 
 .cardTitle {
   color: white;
