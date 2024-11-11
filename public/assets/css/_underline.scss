@@ -1,0 +1,11 @@
+@use "variables";
+
+@mixin underline($thickness: 0.5rem, $offset: 10px) {
+  text-underline-offset: $offset;
+  text-decoration-skip-ink: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: variables.$yellow;
+  text-decoration-thickness: $thickness;
+  line-height: calc(5 * $offset);
+}

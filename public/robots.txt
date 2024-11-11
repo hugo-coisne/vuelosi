@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://talosi.com/sitemap.xml

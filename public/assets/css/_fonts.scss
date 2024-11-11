@@ -1,0 +1,149 @@
+@mixin font-app {
+  /* Thin Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Thin.ttf") format('truetype');
+    font-weight: 100;
+    font-display: fallback;
+  }
+
+  /* Thin Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-ThinItalic.ttf") format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* Extra light Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-ExtraLight.ttf") format('truetype');
+    font-weight: 200;
+    font-display: fallback;
+  }
+
+  /* Extra light Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-ExtraLightItalic.ttf") format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* light Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Light.ttf") format('truetype');
+    font-weight: 300;
+  }
+  /* light Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-LightItalic.ttf") format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* regular Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Regular.ttf") format('truetype');
+    font-display: fallback;
+  }
+
+  /* Italic*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Italic.ttf") format('truetype');
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* medium Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Medium.ttf") format('truetype');
+    font-weight: 500;
+    font-display: fallback;
+  }
+
+  /* medium Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-MediumItalic.ttf") format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* semi bold Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+    font-display: fallback;
+  }
+  /* semi bold Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf") format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* bold Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-display: fallback;
+  }
+  /* bold italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-BoldItalic.ttf") format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* Extra bold Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-ExtraBold.ttf") format('truetype');
+    font-weight: 800;
+    font-display: fallback;
+  }
+  /* Extra bold Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-ExtraBoldItalic.ttf") format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: fallback;
+  }
+
+  /* Black Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-Black.ttf") format('truetype');
+    font-weight: 900;
+    font-display: fallback;
+  }
+
+  /* Black Italic Weight*/
+  @font-face {
+    font-family: "WorkSans";
+    src: url("@/assets/fonts/WorkSans/WorkSans-BlackItalic.ttf") format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: fallback;
+  }
+}
+
+

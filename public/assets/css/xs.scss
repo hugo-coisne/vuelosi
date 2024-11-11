@@ -1,0 +1,9 @@
+.till {
+  .fresque {
+    max-width: 50%;
+    top: -105px;
+  }
+  .fresque.left{
+    top: calc(-0.2 * 100vw);
+  }
+}
