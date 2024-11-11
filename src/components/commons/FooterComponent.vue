@@ -71,7 +71,7 @@ const { displayFooterTxt = true } = defineProps<{
     </div>
   </section>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 .footer {

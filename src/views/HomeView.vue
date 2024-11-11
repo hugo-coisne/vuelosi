@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
+import IntrapreneurComponent from '@/components/home/IntrapreneurComponent.vue'
 import IntroComponent from '@/components/home/IntroComponent.vue'
 import TalentsComponent from '@/components/home/TalentsComponent.vue'
 </script>
@@ -16,9 +17,10 @@ import TalentsComponent from '@/components/home/TalentsComponent.vue'
     :subtitle="'Nos talents au service de vos idées'"
   />
   <TalentsComponent />
+  <IntrapreneurComponent />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 @media print {

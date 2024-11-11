@@ -146,7 +146,7 @@ const {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/media';
 @use '@/assets/css/variables';
 

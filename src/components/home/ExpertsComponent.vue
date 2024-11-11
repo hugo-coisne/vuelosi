@@ -2,7 +2,7 @@
 import ExpertCardComponent from '@/components/commons/cards/ExpertCardComponent.vue'
 import CardListComponent from '@/components/commons/cards/CardListComponent.vue'
 import TitleSectionComponent from '@/components/commons/TitleSectionComponent.vue'
-import { onMounted } from 'vue'
+import { onMounted, useTemplateRef } from 'vue'
 
 const {
   title = '',
@@ -39,9 +39,11 @@ const {
   cards?: any[]
 }>()
 
+// const experts = useTemplateRef('experts')
+
 function animateBoxes(): void {
   if (typeof window !== 'undefined') return
-  gsap.utils.toArray('#experts app-expert-card').forEach((box, index) => {
+  gsap.utils.toArray('#experts').forEach((box, index) => {
     const boxElement = box as HTMLElement
     gsap.from(boxElement, {
       opacity: 0,
@@ -60,7 +62,7 @@ onMounted(() => animateBoxes())
 </script>
 
 <template>
-  <section id="experts">
+  <section id="experts" ref="experts">
     <div class="container our-experts">
       <TitleSectionComponent
         :subtitle="subtitle"
@@ -87,7 +89,7 @@ onMounted(() => animateBoxes())
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 .till {

@@ -15,11 +15,11 @@ interface Props {
 }
 
 const {
-  type= 'primary',
+  type = 'primary',
   size = 'medium',
   class: btClass,
-  routerLink= '',
-  href= '',
+  routerLink = '',
+  href = '',
 } = defineProps<Props>()
 
 const router = useRouter()
@@ -36,8 +36,7 @@ function onClick() {
 }
 
 const classes = computed(
-  () =>
-    `t-button t-button--${type} t-button--${size} ${btClass}`,
+  () => `t-button t-button--${type} t-button--${size} ${btClass}`,
 )
 </script>
 
@@ -47,7 +46,7 @@ const classes = computed(
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 .t-button {

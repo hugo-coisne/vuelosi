@@ -1,18 +1,19 @@
 <script setup lang="ts">
-const { subtitle = '', title = 'The main title' } = defineProps<{
+const { subtitle = '', title = 'The main title', style ='' } = defineProps<{
   subtitle?: string
   title?: string
+  style?: string
 }>()
 </script>
 
 <template>
-  <div class="title-section gs_reveal gs_reveal_fromLeft">
+  <div class="title-section gs_reveal gs_reveal_fromLeft" :style="style">
     <span>{{ subtitle }}</span>
     <h2>{{ title }}</h2>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 @use '@/assets/css/underline';
 

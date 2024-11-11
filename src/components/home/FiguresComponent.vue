@@ -51,7 +51,7 @@ const {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .list {
   display: flex;
   justify-content: space-evenly !important;

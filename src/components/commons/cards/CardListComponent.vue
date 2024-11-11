@@ -90,16 +90,10 @@ function isMobileDevice() {
 }
 
 function hideLeftPart() {
-  console.log('hide left part :', cardList.value!.scrollLeft == 0)
   return cardList.value!.scrollLeft == 0 || isMobileDevice()
 }
 
 function hideRightPart() {
-  console.log(
-    'hide right part :',
-    cardList.value!.scrollLeft ==
-      cardList.value!.scrollWidth - cardList.value!.clientWidth,
-  )
   return (
     cardList.value!.scrollLeft ==
       cardList.value!.scrollWidth - cardList.value!.clientWidth ||

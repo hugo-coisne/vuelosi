@@ -162,7 +162,7 @@ function onToggleMenu() {
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/media';
 @use '@/assets/css/variables';
 @use '@/assets/css/underline';

@@ -172,7 +172,6 @@ const {
   subtitle?: string
   description?: string[]
 }>()
-console.log(talents[0])
 </script>
 
 <template>
@@ -216,4 +215,4 @@ console.log(talents[0])
   </section>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
