@@ -46,7 +46,7 @@ function scrollRight(scrollValue: number) {
 }
 
 watch(hoverOnLeft, newVal => {
-  if (newVal) {
+  if (newVal && !isMobileDevice()) {
     rightScroller = setInterval(function () {
       scrollRight(10)
       updateSidePartsDisplay()
@@ -57,7 +57,7 @@ watch(hoverOnLeft, newVal => {
 })
 
 watch(hoverOnRight, newVal => {
-  if (newVal) {
+  if (newVal && !isMobileDevice()) {
     leftScroller = setInterval(function () {
       scrollLeft(10)
       updateSidePartsDisplay()
@@ -68,19 +68,19 @@ watch(hoverOnRight, newVal => {
 })
 
 function mouseHoverLeft() {
-  hoverOnLeft.value = true
+  if (!isMobileDevice())  hoverOnLeft.value = true
 }
 
 function mouseClickLeft() {
-  scrollRight(296)
+  if (!isMobileDevice()) scrollRight(296)
 }
 
 function mouseHoverRight() {
-  hoverOnRight.value = true
+  if (!isMobileDevice()) hoverOnRight.value = true
 }
 
 function mouseClickRight() {
-  scrollLeft(296)
+  if (!isMobileDevice()) scrollLeft(296)
 }
 
 function isMobileDevice() {
@@ -100,8 +100,9 @@ function hideRightPart() {
     isMobileDevice()
   )
 }
-
-watch(cardList, updateSidePartsDisplay)
+watch(cardList, () => {
+  updateSidePartsDisplay()
+})
 </script>
 
 <template>
@@ -113,7 +114,7 @@ watch(cardList, updateSidePartsDisplay)
         @mouseleave="hoverOnLeft = false"
         class="left"
         :style="
-          leftOverlayStyle + `${hiddenSideParts.left ? ';opacity: 0;' : ''}`
+          leftOverlayStyle + `${hiddenSideParts.left ? ';display: none;' : ''}`
         "
       ></div>
       <div
@@ -122,7 +123,7 @@ watch(cardList, updateSidePartsDisplay)
         @mouseleave="hoverOnRight = false"
         class="right"
         :style="
-          rightOverlayStyle + `${hiddenSideParts.right ? ';opacity: 0;' : ''}`
+          rightOverlayStyle + `${hiddenSideParts.right ? ';display: none;' : ''}`
         "
       ></div>
     </div>
