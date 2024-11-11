@@ -17,12 +17,12 @@ const {
   <section id="intrapreneur">
     <div class="intrapreneurs">
       <img
-        src="@/assets/images/intrapreneur/back.webp"
+        src="/assets/images/intrapreneur/back.webp"
         alt="Background intrapreneur Talosi"
         class="back-img"
       />
       <img
-        src="@/assets/gif/logo_blanc.gif"
+        src="/assets/gif/logo_blanc.gif"
         alt="Talosi Logo"
         class="logo gs_reveal gs_reveal_fromLeft"
         width="200px"
@@ -38,7 +38,7 @@ const {
       <div class="philosophy">
         <div class="gs_reveal gs_reveal_fromRight">
           <img
-            src="@/assets/svg/tillsets/quote.svg"
+            src="/assets/svg/tillsets/quote.svg"
             alt="Quote Talosi"
             width="114px"
           />
@@ -68,20 +68,20 @@ const {
       </div>
       <div class="citation gs_reveal gs_reveal_fromRight">
         <LogoAndTextCardComponent
-          :image="{ filename: 'src/assets/images/intrapreneur/mission.png' }"
+          :image="{ filename: 'mission.png' }"
           :text="'Définissez votre mission, prenez le contrôle de vos défis ici !'"
         />
         <LogoAndTextCardComponent
-          :image="{ filename: 'src/assets/images/intrapreneur/sante.png' }"
+          :image="{ filename: 'sante.png' }"
           :text="'Ta mutuelle et ta prévention à 100% offerte pour toi et ta famille !'"
         />
         <LogoAndTextCardComponent
-          :image="{ filename: 'src/assets/images/intrapreneur/formation.png' }"
+          :image="{ filename: 'formation.png' }"
           :text="'Formations en open bar : développez vos compétences sans limites chez nous!'"
         />
         <LogoAndTextCardComponent
           :image="{
-            filename: 'src/assets/images/intrapreneur/anniversaire.png',
+            filename: 'anniversaire.png',
           }"
           :text="'Célébrez votre anniversaire : journée offerte chez nous!'"
         />
@@ -91,7 +91,7 @@ const {
         <a class="link" :href="network.link" target="_blank" rel="nofollow">
           <img
             class="icon"
-            src="@/assets/svg/tillsets/plus.png"
+            src="/assets/svg/tillsets/plus.png"
             alt="Voir plus d'avantages Talosi"
             width="114px"
           />
@@ -100,7 +100,7 @@ const {
     </div>
     <div class="till">
       <img
-        src="@/assets/svg/tillsets/fresque.svg"
+        src="/assets/svg/tillsets/fresque.svg"
         class="fresque right rotate"
         alt="fresque"
       />

@@ -88,7 +88,7 @@ const {
   <section id="intro">
     <div class="intro">
       <img
-        src="@/assets/images/intro.webp"
+        src="/assets/images/intro.webp"
         alt="background image"
         class="bg-image"
       />
@@ -100,7 +100,7 @@ const {
 
       <img
         alt="cadre Talosi"
-        src="@/assets/images/blue_jaune_3.webp"
+        src="/assets/images/blue_jaune_3.webp"
         class="forme"
       />
       <div
@@ -116,7 +116,7 @@ const {
       >
         <img
           alt="Logo Talosi"
-          src="@/assets/svg/logo/talosi-logo-blanc.svg"
+          src="/assets/svg/logo/talosi-logo-blanc.svg"
           class="img-fluid logo"
         />
         <div class="explanation">

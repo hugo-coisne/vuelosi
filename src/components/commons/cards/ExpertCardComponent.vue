@@ -8,18 +8,23 @@ const {
   image?: any
   content?: any
 }>()
+
 </script>
 
 <template>
   <div class="card-container">
     <div class="card">
       <img
-        src="@/assets/svg/card/header.png"
+        src="/assets/svg/card/header.png"
         class="card-img-top"
         alt="Header Expert Talosi"
         width="300px"
       />
-      <img :src="image" :alt="image?.alt" class="img-fluid icon" />
+      <img
+        :src="`/assets/svg/expertises/${image}`"
+        :alt="image?.alt"
+        class="img-fluid icon"
+      />
 
       <div class="card-body">
         <p class="card-title">{{ title }}</p>

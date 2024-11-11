@@ -28,7 +28,7 @@ const { invertColor = false, size = 'md' } = defineProps<{
     >
       <a :href="network.link" target="_blank" rel="nofollow">
         <img
-          :src="`src/assets/svg/social/${network.name + (!invertColor ? '' : '_blue')}.svg`"
+          :src="`/assets/svg/social/${network.name + (!invertColor ? '' : '_blue')}.svg`"
           :class="network.name"
           :alt="'logo ' + network.name"
         />

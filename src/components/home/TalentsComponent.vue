@@ -5,11 +5,10 @@ import TalentCardComponent from '../commons/cards/TalentCardComponent.vue'
 import TitleSectionComponent from '../commons/TitleSectionComponent.vue'
 import type { Talent } from '@/model/Talent'
 
-const talentsSamplePath = 'src/assets/images/talents-sample/'
 const {
   talents = [
     {
-      image: talentsSamplePath + 'adrien-talent.webp',
+      image: 'adrien-talent.webp',
       firstname: 'Adrien',
       lastname: 'Deblock',
       job: 'Lead Dev',
@@ -26,7 +25,7 @@ const {
       technos: ['java', 'node', 'vue', 'docker', 'beer', 'react'],
     },
     {
-      image: talentsSamplePath + '/dylan-talent.webp',
+      image: 'dylan-talent.webp',
       firstname: 'Dylan',
       lastname: 'Deleplanque',
       job: 'Développeur Fullstack',
@@ -43,7 +42,7 @@ const {
       technos: ['java', 'docker', 'python', 'bigdata'],
     },
     {
-      image: talentsSamplePath + '/guillaume.jpeg',
+      image: 'guillaume.jpeg',
       firstname: 'Guillaume',
       lastname: 'lastname',
       job: 'Développeur Fullstack',
@@ -56,7 +55,7 @@ const {
       technos: ['electron', 'rocket', 'thumb', 'beer', 'react'],
     },
     {
-      image: talentsSamplePath + '/hugues.jpg',
+      image: 'hugues.jpg',
       firstname: 'Hugues',
       lastname: 'Dassonval',
       job: 'Happiness manager',
@@ -77,7 +76,7 @@ const {
       technos: ['beer'],
     },
     {
-      image: talentsSamplePath + '/kevin-talent.webp',
+      image: 'kevin-talent.webp',
       firstname: 'Kevin',
       lastname: 'Sansen',
       job: 'CEO',
@@ -94,7 +93,7 @@ const {
       technos: ['electron', 'rocket', 'thumb', 'beer'],
     },
     {
-      image: talentsSamplePath + '/noe-talent.webp',
+      image: 'noe-talent.webp',
       firstname: 'Noé',
       lastname: 'Pamula',
       job: 'Developpeur & CTO',
@@ -115,7 +114,7 @@ const {
       technos: ['java', 'docker', 'python', 'bigdata', 'beer'],
     },
     {
-      image: talentsSamplePath + '/photo-eddy-talosi.png',
+      image: 'photo-eddy-talosi.png',
       firstname: 'Eddy',
       lastname: 'Derampe',
       job: 'CEO Lille',
@@ -136,7 +135,7 @@ const {
       technos: ['java', 'node', 'vue', 'docker', 'beer', 'react'],
     },
     {
-      image: talentsSamplePath + '/sebastien-talent.webp',
+      image: 'sebastien-talent.webp',
       firstname: 'Sebastien',
       lastname: 'lastname',
       job: 'Tech Leader',

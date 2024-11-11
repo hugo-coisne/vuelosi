@@ -7,7 +7,11 @@ const { image = { filename: 'filename' }, text = '' } = defineProps<{
 
 <template>
   <div>
-    <img :src="image.filename" :alt="image.alt" width="114px" />
+    <img
+      :src="`/assets/images/intrapreneur/${image.filename}`"
+      :alt="image.alt"
+      width="114px"
+    />
     <div>
       <p>{{ text }}</p>
     </div>

@@ -17,7 +17,7 @@ const { displayFooterTxt = true } = defineProps<{
     <div class="contact">
       <div class="container">
         <img
-          src="@/assets/svg/logo/talosi-logo-blanc.svg"
+          src="/assets/svg/logo/talosi-logo-blanc.svg"
           alt="logo entreprise talosi"
           height="110px"
         />
@@ -31,27 +31,27 @@ const { displayFooterTxt = true } = defineProps<{
         </p>
         <div class="logo-affiliation">
           <a href="http://www.numeum.fr" target="_blank" rel="nofollow"
-            ><img src="@/assets/images/numeum.png" alt="logo numeum"
+            ><img src="/assets/images/numeum.png" alt="logo numeum"
           /></a>
           <a appCustomRouterLink="/actualites/talosi-rejoint-la-french-tech"
-            ><img src="@/assets/images/frenchtech.png" alt="logo french tech"
+            ><img src="/assets/images/frenchtech.png" alt="logo french tech"
           /></a>
           <a
             appCustomRouterLink="/actualites/talosi-certifie-gold-ecovadis"
             target="_blank"
-            ><img src="@/assets/images/ecovadis.png" alt="logo ecovadis gold"
+            ><img src="/assets/images/ecovadis.png" alt="logo ecovadis gold"
           /></a>
         </div>
         <span class="mt-4 question">On reste en contact ?</span>
         <span class="mt-4"
           ><img
-            src="@/assets/images/contact-number.png"
+            src="/assets/images/contact-number.png"
             height="14px"
             alt="numero contact Talosi"
         /></span>
         <span
           ><img
-            src="@/assets/images/contact-email.png"
+            src="/assets/images/contact-email.png"
             height="18px"
             alt="email contact Talosi"
         /></span>

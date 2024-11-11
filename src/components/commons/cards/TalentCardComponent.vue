@@ -13,13 +13,13 @@ const { talent } = defineProps<{
         <div class="img-talent">
           <img
             class="img-fluid profile-img"
-            :src="talent.image"
-            alt="Portrait de {{talent.firstname}}, {{ talent.job }} chez Talosi"
+            :src="`/assets/images/talents-sample/${talent.image}`"
+            :alt="`Portrait de ${talent.firstname}, ${talent.job} chez Talosi`"
           />
           <div class="frame">
             <img
               class="img-frame"
-              src="@/assets/calques/back-talent.png"
+              src="/assets/calques/back-talent.png"
               alt="Cadre Talent Talosi"
             />
           </div>
@@ -39,7 +39,7 @@ const { talent } = defineProps<{
         </div>
         <div class="technos">
           <div>
-            <i v-for="techno of talent.technos" :class="'techno-' + techno"></i>
+            <i v-for="techno of talent.technos" :class="`techno-${techno}`"></i>
           </div>
         </div>
       </div>

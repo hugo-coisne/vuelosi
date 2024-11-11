@@ -1,32 +1,26 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
-import TalosiBlueInlinePNG from '@/assets/images/talosi_blue_inline.png'
-import LogoBlueInlinePNG from '@/assets/images/logo_blue_inline.png'
-import CrossCircleSVG from '@/assets/svg/tillsets/cross-circle.svg'
-import TalosiLogoBlancSVG from '@/assets/svg/logo/talosi-logo-blanc.svg'
 import BurgerMenuComponent from './BurgerMenuComponent.vue'
 import SocialIconsComponent from './SocialIconsComponent.vue'
-import { computed, defineComponent, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import router from '@/router/index'
 
 const html = document.documentElement
 const routes = router.getRoutes()
 
-interface Props {
-  showSideNav?: boolean
-  greyNavbar?: boolean
-  blogIndex?: number
-  hiddenLinksCount?: number
-}
-
 var {
   blogIndex = 1,
   hiddenLinksCount = 1,
-  showSideNav = false,
+  showSideNavProp = false,
   greyNavbar = false,
-} = defineProps<Props>()
+} = defineProps<{
+  showSideNavProp?: boolean
+  greyNavbar?: boolean
+  blogIndex?: number
+  hiddenLinksCount?: number
+}>()
 
-const showSideNavCopy = ref(showSideNav)
+const showSideNav = ref(showSideNavProp)
 
 const links = ref(routes.slice(0, routes.length - blogIndex - hiddenLinksCount))
 const lastLinks = ref(
@@ -40,15 +34,17 @@ const route = useRoute()
 const path = computed(() => route.path)
 
 watch(
-  () => showSideNav,
+  () => showSideNavProp,
   newVal => {
-    showSideNavCopy.value = newVal
+    showSideNav.value = newVal
   },
 )
 
 function onToggleMenu() {
-  showSideNavCopy.value = !showSideNavCopy.value
-  showSideNavCopy.value
+  console.log('before', showSideNav.value)
+  showSideNav.value = !showSideNav.value
+  console.log('after', showSideNav.value)
+  showSideNav.value
     ? (html.style.overflow = 'hidden')
     : (html.style.overflow = 'auto')
 }
@@ -62,7 +58,9 @@ function onToggleMenu() {
       <div class="container-fluid">
         <RouterLink class="navbar-logo" to="/">
           <img
-            :src="`${greyNavbar ? TalosiBlueInlinePNG : LogoBlueInlinePNG}`"
+            :src="`/assets/images/${
+              greyNavbar ? 'talosi_blue_inline.png' : 'logo_blue_inline.png'
+            }`"
             alt="Logo Talosi"
             width="170px"
             height="30px"
@@ -100,17 +98,21 @@ function onToggleMenu() {
 
     <div
       :class="
-        'talosi-navbar-collapsed no-print ' + `${showSideNav ? 'active' : ''}`
+        `talosi-navbar-collapsed no-print ${showSideNav ? 'active' : ''}`
       "
     >
       <img
-        :src="CrossCircleSVG"
+        src="/assets/svg/tillsets/cross-circle.svg"
         alt="croix"
         @click="onToggleMenu()"
         class="cross"
       />
       <div class="logo">
-        <img :src="TalosiLogoBlancSVG" alt="logo" width="150px" />
+        <img
+          src="/assets/svg/logo/talosi-logo-blanc.svg"
+          alt="logo"
+          width="150px"
+        />
       </div>
       <ul>
         <li class="nav-item" v-for="link in links">

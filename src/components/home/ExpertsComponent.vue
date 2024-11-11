@@ -9,25 +9,25 @@ const {
   subtitle = '',
   cards = [
     {
-      image: 'src/assets/svg/expertises/dev2.svg',
+      image: 'dev2.svg',
       title: 'Développement',
       content:
         "Java, python, ou js ne sont pas nos langues maternelles mais presque. Développer c'est plus que notre métier, c'est notre passion !",
     },
     {
-      image: 'src/assets/svg/expertises/bigdata.svg',
+      image: 'bigdata.svg',
       title: 'Big Data',
       content:
         "La captation, le stockage et la redistribution des données c'est notre dada, Spark, Kafka, Mongo ou tout autre système distribué sont dans nos cordes.",
     },
     {
-      image: 'src/assets/svg/expertises/crog.svg',
+      image: 'crog.svg',
       title: 'DevOps',
       content:
         "Pusher c'est livré ! Une chaine d'intégration continue automatisée qui garantit la qualité du delivery. Venez découvrir comment on fait ça sans stress !",
     },
     {
-      image: 'src/assets/svg/expertises/project_managment.svg',
+      image: 'project_managment.svg',
       title: 'Pilotage',
       content:
         "On ne parle pas d'avion ici mais bien de pilotage de projet ! Et ce n'est pas parce que l'on ne sait pas mettre la jambe derrière la tête que l'on est pas agile.",
@@ -81,7 +81,7 @@ onMounted(() => animateBoxes())
     <div class="till">
       <div class="background-grey"></div>
       <img
-        src="@/assets/svg/tillsets/fresque.svg"
+        src="/assets/svg/tillsets/fresque.svg"
         class="fresque left"
         alt="fresque"
       />

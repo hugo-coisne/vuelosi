@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { subtitle = '', title = 'The main title', style ='' } = defineProps<{
+const {
+  subtitle = '',
+  title = 'The main title',
+  style = '',
+} = defineProps<{
   subtitle?: string
   title?: string
   style?: string
