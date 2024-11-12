@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ImgAndTextComponent from '@/components/commons/ImgAndTextComponent.vue'
 import ActivitiesComponent from '@/components/home/ActivitiesComponent.vue'
 import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
@@ -20,6 +21,10 @@ import TalentsComponent from '@/components/home/TalentsComponent.vue'
   <TalentsComponent />
   <IntrapreneurComponent />
   <ActivitiesComponent />
+  <ImgAndTextComponent
+    :mode="'dark'"
+    :title="'Ici, pas de clients que des partenaires !'"
+  />
 </template>
 
 <style lang="scss" scoped>
