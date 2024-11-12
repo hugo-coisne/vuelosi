@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computeStyles } from '@popperjs/core'
 import { computed, ref, useTemplateRef, watch } from 'vue'
+import { isMobileDevice } from '@/services/tools'
 
 const { componentCount = 1, gradientColor = 'white' } = defineProps<{
   componentCount?: number
@@ -50,7 +50,7 @@ watch(hoverOnLeft, newVal => {
     rightScroller = setInterval(function () {
       scrollRight(10)
       updateSidePartsDisplay()
-    }, 30)
+    }, 10)
   } else {
     clearInterval(rightScroller)
   }
@@ -61,14 +61,14 @@ watch(hoverOnRight, newVal => {
     leftScroller = setInterval(function () {
       scrollLeft(10)
       updateSidePartsDisplay()
-    }, 30)
+    }, 20)
   } else {
     clearInterval(leftScroller)
   }
 })
 
 function mouseHoverLeft() {
-  if (!isMobileDevice())  hoverOnLeft.value = true
+  if (!isMobileDevice()) hoverOnLeft.value = true
 }
 
 function mouseClickLeft() {
@@ -83,12 +83,6 @@ function mouseClickRight() {
   if (!isMobileDevice()) scrollLeft(296)
 }
 
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent,
-  )
-}
-
 function hideLeftPart() {
   return cardList.value!.scrollLeft == 0 || isMobileDevice()
 }
@@ -100,9 +94,7 @@ function hideRightPart() {
     isMobileDevice()
   )
 }
-watch(cardList, () => {
-  updateSidePartsDisplay()
-})
+watch(cardList, () => updateSidePartsDisplay())
 </script>
 
 <template>
@@ -123,13 +115,15 @@ watch(cardList, () => {
         @mouseleave="hoverOnRight = false"
         class="right"
         :style="
-          rightOverlayStyle + `${hiddenSideParts.right ? ';display: none;' : ''}`
+          rightOverlayStyle +
+          `${hiddenSideParts.right ? ';display: none;' : ''}`
         "
       ></div>
     </div>
     <div
       ref="list"
       class="card-list"
+      @scroll="updateSidePartsDisplay()"
       :style="'grid-template-columns: repeat(' + componentCount + ', 1fr)'"
     >
       <slot />
