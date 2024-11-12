@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ActivitiesComponent from '@/components/home/ActivitiesComponent.vue'
 import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
 import IntrapreneurComponent from '@/components/home/IntrapreneurComponent.vue'
@@ -18,6 +19,7 @@ import TalentsComponent from '@/components/home/TalentsComponent.vue'
   />
   <TalentsComponent />
   <IntrapreneurComponent />
+  <ActivitiesComponent />
 </template>
 
 <style lang="scss" scoped>

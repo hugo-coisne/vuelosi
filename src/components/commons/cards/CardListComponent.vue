@@ -3,7 +3,7 @@ import { computed, ref, useTemplateRef, watch } from 'vue'
 import { isMobileDevice } from '@/services/tools'
 
 const { componentCount = 1, gradientColor = 'white' } = defineProps<{
-  componentCount?: number
+  componentCount: number
   gradientColor?: string
 }>()
 

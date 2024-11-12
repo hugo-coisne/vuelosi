@@ -24,8 +24,8 @@ onMounted(() => useParallaxEffect().init())
         width="300px"
       />
       <img
-        :src="`/assets/svg/expertises/${image}`"
-        :alt="image?.alt"
+        :src="`/assets/svg/expertises/${image.filename}`"
+        :alt="image.alt"
         class="img-fluid icon"
       />
 
