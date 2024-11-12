@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import TitleSectionComponent from '@/components/commons/TitleSectionComponent.vue'
 import LogoAndTextCardComponent from '@/components/commons/cards/LogoAndTextCardComponent.vue'
+import { useParallaxEffect } from '@/composables/paralax';
+import { onMounted } from 'vue';
 const {
   network: any = {
     name: 'whatsapp',
@@ -11,6 +13,7 @@ const {
   network?: any
   citation_title?: string
 }>()
+onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>

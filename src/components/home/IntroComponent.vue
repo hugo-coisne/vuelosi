@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import ButtonComponent from '@/components/commons/ButtonComponent.vue'
+import { useParallaxEffect } from '@/composables/paralax';
+import { onMounted } from 'vue';
 
 const {
   cities = ['Lille', 'Paris', 'Lyon'],
@@ -8,6 +10,7 @@ const {
   cities?: any
   buttonText?: string
 }>()
+onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>

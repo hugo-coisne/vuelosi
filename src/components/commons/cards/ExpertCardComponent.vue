@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useParallaxEffect } from '@/composables/paralax'
+import { onMounted } from 'vue'
+
 const {
   title = 'Default title',
   image = {},
@@ -8,11 +11,11 @@ const {
   image?: any
   content?: any
 }>()
-
+onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>
-  <div class="card-container">
+  <div class="card-container gs_reveal">
     <div class="card">
       <img
         src="/assets/svg/card/header.png"

@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useParallaxEffect } from '@/composables/paralax'
 import ButtonComponent from '../commons/ButtonComponent.vue'
 import CardListComponent from '../commons/cards/CardListComponent.vue'
 import TalentCardComponent from '../commons/cards/TalentCardComponent.vue'
 import TitleSectionComponent from '../commons/TitleSectionComponent.vue'
 import type { Talent } from '@/model/Talent'
+import { onMounted } from 'vue'
 
 const {
   talents = [
@@ -171,6 +173,7 @@ const {
   subtitle?: string
   description?: string[]
 }>()
+onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>

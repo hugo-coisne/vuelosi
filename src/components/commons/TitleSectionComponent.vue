@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useParallaxEffect } from '@/composables/paralax';
+import { onMounted } from 'vue';
+
 const {
   subtitle = '',
   title = 'The main title',
@@ -8,6 +11,7 @@ const {
   title?: string
   style?: string
 }>()
+onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>
