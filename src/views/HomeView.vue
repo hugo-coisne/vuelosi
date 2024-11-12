@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ImgAndTextComponent from '@/components/commons/ImgAndTextComponent.vue'
 import ActivitiesComponent from '@/components/home/ActivitiesComponent.vue'
+import CitationComponent from '@/components/home/CitationComponent.vue'
 import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
 import IntrapreneurComponent from '@/components/home/IntrapreneurComponent.vue'
@@ -25,6 +26,7 @@ import TalentsComponent from '@/components/home/TalentsComponent.vue'
     :mode="'dark'"
     :title="'Ici, pas de clients que des partenaires !'"
   />
+  <CitationComponent/>
 </template>
 
 <style lang="scss" scoped>
