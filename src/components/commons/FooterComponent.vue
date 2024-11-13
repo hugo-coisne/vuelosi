@@ -138,7 +138,7 @@ const { displayFooterTxt = true } = defineProps<{
 @media screen and (max-width: 575px) {
   .footer {
     .social-network {
-      div {
+      > div {
         display: flow-root;
       }
     }
