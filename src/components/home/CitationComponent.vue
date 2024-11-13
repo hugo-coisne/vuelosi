@@ -46,7 +46,8 @@ onMounted(() => useParallaxEffect().init())
             <span
               >A toi de voir le format : WhatsApp, Discord, Téléphone, Mail,
             </span>
-            <strike style="font-size: 16px">pigeons voyageur</strike
+            <span style="font-size: 16px; text-decoration: line-through"
+              >pigeons voyageur</span
             ><span>
               ou autour d’un «&nbsp;café&nbsp;», c'est à toi de voir !</span
             >
@@ -67,7 +68,7 @@ onMounted(() => useParallaxEffect().init())
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 .citation {

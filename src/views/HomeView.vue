@@ -6,6 +6,7 @@ import ExpertsComponent from '@/components/home/ExpertsComponent.vue'
 import FiguresComponent from '@/components/home/FiguresComponent.vue'
 import IntrapreneurComponent from '@/components/home/IntrapreneurComponent.vue'
 import IntroComponent from '@/components/home/IntroComponent.vue'
+import NewsComponent from '@/components/home/NewsComponent.vue'
 import TalentsComponent from '@/components/home/TalentsComponent.vue'
 </script>
 
@@ -26,7 +27,8 @@ import TalentsComponent from '@/components/home/TalentsComponent.vue'
     :mode="'dark'"
     :title="'Ici, pas de clients que des partenaires !'"
   />
-  <CitationComponent/>
+  <CitationComponent />
+  <NewsComponent />
 </template>
 
 <style lang="scss" scoped>

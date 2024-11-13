@@ -32,7 +32,7 @@ onMounted(() => useParallaxEffect().init())
       <div class="card-body">
         <p class="card-title">{{ title }}</p>
         <hr />
-        <div class="card-text">{{ content }}</div>
+        <div class="card-text" style="margin-bottom: 1rem">{{ content }}</div>
       </div>
     </div>
   </div>
