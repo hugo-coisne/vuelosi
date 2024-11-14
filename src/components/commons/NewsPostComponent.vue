@@ -33,7 +33,7 @@ onMounted(() => useParallaxEffect().init())
 <template>
   <div class="individualPost" v-if="post.title != ''">
     <img
-      v-if="post?.imgUrl !== null"
+      v-if="post.imgUrl !== null"
       :src="post.imgUrl"
       alt="Img Post"
       class="imgActu"

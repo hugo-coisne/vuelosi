@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import { useParallaxEffect } from '@/composables/paralax'
-import { onMounted } from 'vue'
-
 const { formType = 'general' } = defineProps<{ formType: string }>()
-onMounted(() => useParallaxEffect().init())
 </script>
 
 <template>

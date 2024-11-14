@@ -7,7 +7,6 @@ interface Props {
   type?: string
   id?: string | null
   size?: string
-  class: string
   routerLink?: string
   href?: string
   disabled?: boolean
@@ -15,9 +14,9 @@ interface Props {
 }
 
 const {
+  block = false,
   type = 'primary',
   size = 'medium',
-  class: btClass,
   routerLink = '',
   href = '',
 } = defineProps<Props>()
@@ -36,7 +35,9 @@ function onClick() {
 }
 
 const classes = computed(
-  () => `t-button t-button--${type} t-button--${size} ${btClass}`,
+  () =>
+    `t-button t-button--${type} t-button--${size}` +
+    (block ? ' t-button--block' : ''),
 )
 </script>
 

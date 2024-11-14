@@ -2,16 +2,16 @@
 import { ref } from 'vue'
 
 const networks = ref([
-  { name: 'linkedin', link: 'https://www.linkedin.com/company/talosi/' },
+  {
+    name: 'instagram',
+    link: 'https://www.instagram.com/talosi.official/?igshid=YmMyMTA2M2Y%3D',
+  },
   { name: 'discord', link: 'https://discord.gg/pUhaNx4rHN' },
   {
     name: 'whatsapp',
     link: 'https://api.whatsapp.com/send/?phone=33608153735&text=Bonjour+Hello+de+Talosi%2C+je+te+contacte+suite+au+passage+sur+Talosi.com+&app_absent=0',
   },
-  {
-    name: 'instagram',
-    link: 'https://www.instagram.com/talosi.official/?igshid=YmMyMTA2M2Y%3D',
-  },
+  { name: 'linkedin', link: 'https://www.linkedin.com/company/talosi/' },
 ])
 
 const { invertColor = false, size = 'md' } = defineProps<{

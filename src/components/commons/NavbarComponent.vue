@@ -41,9 +41,7 @@ watch(
 )
 
 function onToggleMenu() {
-  console.log('before', showSideNav.value)
   showSideNav.value = !showSideNav.value
-  console.log('after', showSideNav.value)
   showSideNav.value
     ? (html.style.overflow = 'hidden')
     : (html.style.overflow = 'auto')
@@ -97,9 +95,7 @@ function onToggleMenu() {
     </nav>
 
     <div
-      :class="
-        `talosi-navbar-collapsed no-print ${showSideNav ? 'active' : ''}`
-      "
+      :class="`talosi-navbar-collapsed no-print ${showSideNav ? 'active' : ''}`"
     >
       <img
         src="/assets/svg/tillsets/cross-circle.svg"
