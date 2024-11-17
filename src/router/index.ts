@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ContactUsView from '@/views/ContactUsView.vue'
 import NewsView from '@/views/NewsView.vue'
 import StoryView from '@/views/StoryView.vue'
+import CoursesView from '@/views/CoursesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +30,7 @@ const router = createRouter({
     {
       path: '/organisme-de-formation',
       name: 'Formations',
-      component: HomeView,
+      component: CoursesView,
     },
     {
       path: '/contact',
