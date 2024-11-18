@@ -21,10 +21,12 @@ function getClasses() {
 </script>
 
 <template>
-  <RouterLink :to="url" :class="getClasses()"><slot /></RouterLink>
+  <div class="see-btn">
+    <RouterLink :to="url" :class="getClasses()"><slot /></RouterLink>
+  </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '@/assets/css/variables';
 
 a {

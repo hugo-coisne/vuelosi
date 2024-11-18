@@ -20,9 +20,9 @@ function makeTagsList(tags: string[]) {
 <template>
   <div class="card card-training" v-if="training">
     <div class="circle">
-      <img :src="training.picture" class="imgCardHeader" alt="Img Post" />
+      <img :src="training.picture" class="imgCardHead" alt="Img Post" />
     </div>
-    <div class="header">
+    <div class="head">
       <img
         src="/assets/svg/card/header.png"
         class="card-img-top"
@@ -75,13 +75,13 @@ function makeTagsList(tags: string[]) {
     padding: 1rem;
     display: grid;
     align-items: center;
-    .imgCardHeader {
+    .imgCardHead {
       width: 100%;
       object-fit: contain;
     }
   }
 
-  .header {
+  .head {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
