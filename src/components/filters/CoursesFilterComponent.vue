@@ -26,8 +26,8 @@
 @use '@/assets/css/media';
 @use '@/assets/css/variables';
 
-input {
-  width: 60%;
+input[type="text"] {
+  width: 100%;
   border-radius: 50px;
   padding: 10px 15px;
   font-style: italic;
