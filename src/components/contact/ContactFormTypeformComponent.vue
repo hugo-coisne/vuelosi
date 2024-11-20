@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const { formType = 'general' } = defineProps<{ formType: string }>()
+  const { formType = 'general' } = defineProps<{ formType: string }>()
+
 </script>
 
 <template>
+  <component :is="'script'" :src="'//embed.typeform.com/next/embed.js'"/>
   <!-- General -->
   <div class="contact-form-typeform" v-if="formType === 'general'">
     <div data-tf-live="01HQ66XRPNHTCSE8P0TS56P86A"></div>
