@@ -11,9 +11,9 @@ export interface Training {
   prerequisite: string[]
   duration: string
   price: string
-  location: string
+  location: string[]
   sessions: string[]
-  note: number
+  grade: number
   feedbacks: number
   plan: TrainingContent[]
   slug: string

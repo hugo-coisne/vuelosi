@@ -4,6 +4,7 @@ import ContactUsView from '@/views/ContactUsView.vue'
 import NewsView from '@/views/NewsView.vue'
 import StoryView from '@/views/StoryView.vue'
 import CoursesView from '@/views/CoursesView.vue'
+import CourseView from '@/views/CourseView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,10 @@ const router = createRouter({
       path: '/organisme-de-formation',
       name: 'Formations',
       component: CoursesView,
+    },
+    {
+      path: '/organisme-de-formation/:slug',
+      component: CourseView,
     },
     {
       path: '/contact',
